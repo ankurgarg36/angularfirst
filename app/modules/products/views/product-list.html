@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="well well-sm">
+        <strong>Category Title</strong>
+        <div class="btn-group">
+            <a href="javascript:;" ng-click="viewClass='list-group-item'" id="list" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-th-list">
+            </span>List</a> <a href="javascript:;" ng-click="viewClass='grid-group-item'" id="grid" class="btn btn-default btn-sm"><span
+                class="glyphicon glyphicon-th"></span>Grid</a>
+        </div>
+    </div>
+    <div id="products" class="row list-group">
+        <div class="item  col-xs-4 col-lg-4" ng-class="viewClass" ng-repeat="product in productList">
+            <div class="thumbnail">
+                <img class="group list-group-image" ng-src="{{product.image}}" alt="{{product.title}}" title="{{product.title}}" />
+                <div class="caption">
+                    <h4 class="group inner list-group-item-heading" ng-bind="product.title"></h4>
+                    <p class="group inner list-group-item-text" ng-bind="product.description"></p>
+                    <div class="row">
+                        <div class="col-xs-12 col-md-6">
+                            <p class="lead" ng-bind="product.price"></p>
+                        </div>
+                        <div class="col-xs-12 col-md-6">
+                            <a class="btn btn-success" ui-sref="productDetail({'pid':product.id})">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
