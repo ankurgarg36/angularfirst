@@ -1,5 +1,5 @@
 # angularfirst
-My First Project On AngularJ V1.0
+My First Project On AngularJs V1.0
 
 This include the following pages/functionlaity
 
